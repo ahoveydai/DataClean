@@ -46,7 +46,7 @@ run_analysis <- function (){
 
   dt1 <- data.table(SubData)
   setkey(dt1, Activity, Subject) 
-  ## df2 <- dt1[, list(tBodyAcc_mean_X=mean(tBodyAcc_mean_X), tBodyAcc_mean_Y=mean(tBodyAcc_mean_Y), tBodyAcc_mean_Z=mean(tBodyAcc_mean_Z), tBodyAcc_std_X=mean(tBodyAcc_std_X)), by=list(Activity, Subject)]
+  
   df2 <- dt1[, list(tBodyAcc_mean_X=mean(tBodyAcc_mean_X), tBodyAcc_mean_Y=mean(tBodyAcc_mean_Y), tBodyAcc_mean_Z=mean(tBodyAcc_mean_Z), tBodyAcc_std_X=mean(tBodyAcc_std_X), tBodyAcc_std_Y=mean(tBodyAcc_std_Y), tBodyAcc_std_Z=mean(tBodyAcc_std_Z)), by=list(Activity, Subject)]
   df2 <- data.frame(df2)
   rm(dt1)
